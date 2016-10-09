@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="DevAnimals.Device_Mobile.RegisterPage_mobile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DevAnimals.Device_Mobile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel  Height="700">
+        <TextBlock TextAlignment="Center" FontSize="24" Foreground="Beige">Adding one add</TextBlock>
+        <TextBox FontSize="24" Width="400" Margin="0,20,0,5" PlaceholderText="Title"></TextBox>
+        <TextBox FontSize="24" Width="400" Margin="0,5,0,5" PlaceholderText="Animal Category"></TextBox>
+        <TextBox FontSize="24" Width="400" Margin="0,5,0,5" PlaceholderText="Description" ></TextBox>
+        <TextBox FontSize="24" Width="400" Margin="0,5,0,5" PlaceholderText="Location" ></TextBox>
+        <TextBox FontSize="24" Width="400" Margin="0,5,0,5" PlaceholderText="E-mail" ></TextBox>
+        <TextBox FontSize="24" Width="400" Margin="0,5,0,5" PlaceholderText="Telephone Number" ></TextBox>
+        <StackPanel Height="300">
+            <TextBlock TextAlignment="Center" FontSize="24" Foreground="White">Add images</TextBlock>
+
+            <Grid Height="200" Margin="0,10,0,0" Background="Beige" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <ListBox >
+                    <ListBoxItem  >
+                        <Image Source="/Assets/dog2.jpg" Width="100" Height="100"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <Image Source="/Assets/dog1.jpg" Width="100" Height="100"/>
+                    </ListBoxItem>
+                </ListBox>
+            </Grid>
+
+        </StackPanel>
+    </StackPanel>
+</Page>
