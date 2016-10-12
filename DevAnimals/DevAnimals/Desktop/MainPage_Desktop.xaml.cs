@@ -34,7 +34,7 @@ namespace DevAnimals.Device_Desktop
         private void IconListbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ShareListBoxitem.IsSelected)
-            { MyFrame.Navigate(typeof(Page1_Desktop)); }
+            { MyFrame.Navigate(typeof(RegisterAccount_Desktop)); }
             else if (FavoritesListBoxItem.IsSelected)
             { MyFrame.Navigate(typeof(Page2_Desktop)); }
             else if (NavListBoxItem.IsSelected)

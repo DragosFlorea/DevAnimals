@@ -22,13 +22,13 @@
     <AppXManifest Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-09T15:35:07.168</Modified>
+      <Modified>2016-10-12T19:30:34.490</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\DevAnimals.exe">
       <PackagePath>entrypoint\DevAnimals.exe</PackagePath>
-      <Modified>2016-10-09T15:35:05.964</Modified>
+      <Modified>2016-10-12T19:30:33.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\drago\.nuget\packages\EntityFramework.Core\7.0.0-rc1-final\lib\netcore50\EntityFramework.Core.dll">
       <PackagePath>EntityFramework.Core.dll</PackagePath>
@@ -642,7 +642,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\DevAnimals.xr.xml">
       <PackagePath>DevAnimals.xr.xml</PackagePath>
-      <Modified>2016-10-09T15:35:05.778</Modified>
+      <Modified>2016-10-12T19:30:33.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -650,11 +650,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-10-09T15:35:06.921</Modified>
+      <Modified>2016-10-12T19:30:34.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\Core\DevAnimals.exe">
       <PackagePath>DevAnimals.exe</PackagePath>
-      <Modified>2016-10-09T15:35:07.160</Modified>
+      <Modified>2016-10-12T19:30:34.481</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

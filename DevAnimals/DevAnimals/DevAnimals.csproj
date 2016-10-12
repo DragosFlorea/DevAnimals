@@ -99,14 +99,15 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Desktop\ComponentModel\ObservableObjectBase.cs" />
+    <Compile Include="Desktop\Database_Control\Repository.cs" />
     <Compile Include="Desktop\MainPage_Desktop.xaml.cs">
       <DependentUpon>MainPage_Desktop.xaml</DependentUpon>
     </Compile>
     <Compile Include="Desktop\Models\Category.cs" />
-    <Compile Include="Desktop\Models\DevAnimalsContext.cs" />
+    <Compile Include="Desktop\Database_Control\DevAnimalsContext.cs" />
     <Compile Include="Desktop\Models\RegisterClass.cs" />
-    <Compile Include="Desktop\Page1_Desktop.xaml.cs">
-      <DependentUpon>Page1_Desktop.xaml</DependentUpon>
+    <Compile Include="Desktop\RegisterAccount_Desktop.xaml.cs">
+      <DependentUpon>RegisterAccount_Desktop.xaml</DependentUpon>
     </Compile>
     <Compile Include="Desktop\Page2_Desktop.xaml.cs">
       <DependentUpon>Page2_Desktop.xaml</DependentUpon>
@@ -114,7 +115,7 @@
     <Compile Include="Desktop\Page3_Desktop.xaml.cs">
       <DependentUpon>Page3_Desktop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Desktop\ViewModels\Interests_ViewModel.cs" />
+    <Compile Include="Desktop\ViewModels\RegisterAccount_VM.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -179,7 +180,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Desktop\Page1_Desktop.xaml">
+    <Page Include="Desktop\RegisterAccount_Desktop.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

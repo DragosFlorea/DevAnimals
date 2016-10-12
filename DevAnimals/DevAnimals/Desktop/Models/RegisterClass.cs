@@ -9,15 +9,20 @@ using Windows.UI.Xaml.Controls;
 
 namespace DevAnimals.Desktop.Models
 {
-   internal class RegisterClass: ObservableObjectBase
+   public class RegisterClass: ObservableObjectBase
     {
-        
+
         public int IdUser { get; set; }
-        public string User { get; set; }
-        public string Location { get; set; }
-        public string Email { get; set; }
-        public int TelephoneNumber { get; set; }
-     
+        public string user { get; set; }
+        public string password { get; set; }
+        public string location { get; set; }
+        public string email { get; set; }
+        public int telephoneNumber { get; set; }
+
+
+
     }
+
+    
 
 }

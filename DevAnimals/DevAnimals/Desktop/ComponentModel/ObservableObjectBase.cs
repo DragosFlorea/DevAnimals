@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,18 +10,20 @@ namespace DevAnimals.Desktop.ComponentModel
 {
     public class ObservableObjectBase:INotifyPropertyChanged
     {
-        /// <summary>
-        /// Notifies that the property has changed.
-        /// </summary>
-        /// <param name="propertyName">Name of the property.</param>
-        protected void NotifyPropertyChanged(string propertyName)
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if (object.Equals(storage, value)) return false;
+
+            storage = value;
+            this.NotifyPropertyChanged(propertyName);
+            return true;
         }
 
-        /// <summary>
-        /// The event that is fired when a property has changed.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        protected void NotifyPropertyChanged([CallerMemberName] string info = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
+        }
     }
 }

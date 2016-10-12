@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Entity;
+﻿using DevAnimals.Desktop.Models;
+using Microsoft.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 /// https://xamlbrewer.wordpress.com/2016/06/01/getting-started-with-sqlite-and-entity-framework-on-uwp/
 /// https://docs.efproject.net/en/latest/platforms/index.html
 /// </summary>
-namespace DevAnimals.Desktop.Models
+namespace DevAnimals.Desktop.Database_Control
 {
    public class DevAnimalsContext : DbContext
     {

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DevAnimals.Desktop.Database_Control;
+using DevAnimals.Desktop.Models;
+using DevAnimals.Desktop.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,11 +23,22 @@ namespace DevAnimals.Device_Desktop
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Page1_Desktop : Page
+    public sealed partial class RegisterAccount_Desktop : Page
     {
-        public Page1_Desktop()
+        RegisterAccount_VM NewUser;
+        
+        public RegisterAccount_Desktop()
         {
             this.InitializeComponent();
+
+            NewUser = new RegisterAccount_VM(new RegisterClass());
+            DataContext = NewUser;
+
+        }
+
+        private void Register_btn_Click(object sender, RoutedEventArgs e)
+        {
+            UsersRepository.SaveUser(NewUser.Registereduser);
         }
     }
 }
