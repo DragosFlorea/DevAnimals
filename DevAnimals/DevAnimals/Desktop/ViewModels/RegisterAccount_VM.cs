@@ -68,18 +68,18 @@ namespace DevAnimals.Desktop.ViewModels
                 }
             }
         }
-        public string IDUser
-        {
-            get
-            {
-                if (this.registereduser == null)
-                {
-                    return string.Empty;
-                }
-                return new Guid().ToString();
-            }
+        //public string IDUser
+        //{
+        //    get
+        //    {
+        //        if (this.registereduser == null)
+        //        {
+        //            return string.Empty;
+        //        }
+        //        return new Guid().ToString();
+        //    }
             
-        }
+        //}
         public int TelephoneNumber
         {
             get

@@ -24,29 +24,30 @@ namespace DevAnimals.Device_Desktop
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
-    /// https://azure.microsoft.com/en-us/documentation/articles/app-service-authentication-overview/
     /// </summary>
-    public sealed partial class RegisterAccount_Desktop : Page
+    public sealed partial class LoginPage_Desktop : Page
     {
-        RegisterAccount_VM NewUser;
-        
-        public RegisterAccount_Desktop()
+        private Login_VM LoginUser;
+        public LoginPage_Desktop()
         {
             this.InitializeComponent();
-
-            NewUser = new RegisterAccount_VM(new RegisterClass());
-            DataContext = NewUser;
-
+            LoginUser = new Login_VM(new LoginClass());
+            DataContext = LoginUser;
         }
 
-        private async void Register_btn_Click(object sender, RoutedEventArgs e)
+        private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            UsersRepository.SaveUser(NewUser.Registereduser);
-            Frame MyFrame = (Frame)DesktopAppSettings.GetItem("myFrameKeyforRegisterNavigationtoLoginPage");
-
-            var dialog = new MessageDialog("Register Complete!");
-            await dialog.ShowAsync();
-            MyFrame.Navigate(typeof(LoginPage_Desktop));
+            Login_VM x = new Login_VM();
+            
+            var response=x.CheckAuth(LoginUser);
+            Frame MyFrame = (Frame)DesktopAppSettings.GetItem("myFrameKeyforLoginNavigationtoAcountPage");           
+            if (response)
+            {
+                var dialog = new MessageDialog("Login Complete!");
+                await dialog.ShowAsync();
+                MyFrame.Navigate(typeof(Page3_Desktop));
+                //var yx =DesktopAppSettings.GetItem("myFrameKey");
+            }
         }
     }
 }

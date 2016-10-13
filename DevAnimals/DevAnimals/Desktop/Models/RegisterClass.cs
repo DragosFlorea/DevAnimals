@@ -20,7 +20,6 @@ namespace DevAnimals.Desktop.Models
         public int telephoneNumber { get; set; }
 
 
-
     }
 
     

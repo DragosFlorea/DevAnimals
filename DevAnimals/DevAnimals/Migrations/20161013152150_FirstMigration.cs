@@ -28,10 +28,11 @@ namespace DevAnimals.Migrations
                 {
                     IdUser = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Email = table.Column<string>(nullable: true),
-                    Location = table.Column<string>(nullable: true),
-                    TelephoneNumber = table.Column<int>(nullable: false),
-                    User = table.Column<string>(nullable: true)
+                    email = table.Column<string>(nullable: true),
+                    location = table.Column<string>(nullable: true),
+                    password = table.Column<string>(nullable: true),
+                    telephoneNumber = table.Column<int>(nullable: false),
+                    user = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

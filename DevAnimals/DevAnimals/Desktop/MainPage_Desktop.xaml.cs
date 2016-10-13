@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevAnimals.Desktop.Settings;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,11 +35,20 @@ namespace DevAnimals.Device_Desktop
         private void IconListbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ShareListBoxitem.IsSelected)
-            { MyFrame.Navigate(typeof(RegisterAccount_Desktop)); }
+            {
+                MyFrame.Navigate(typeof(RegisterAccount_Desktop));
+                DesktopAppSettings.AddItem("myFrameKeyforRegisterNavigationtoLoginPage", MyFrame);
+            }
             else if (FavoritesListBoxItem.IsSelected)
-            { MyFrame.Navigate(typeof(Page2_Desktop)); }
+            {
+                MyFrame.Navigate(typeof(LoginPage_Desktop));
+                DesktopAppSettings.AddItem("myFrameKeyforLoginNavigationtoAcountPage", MyFrame);
+            }
             else if (NavListBoxItem.IsSelected)
-            { MyFrame.Navigate(typeof(Page3_Desktop)); }
+            {
+                MyFrame.Navigate(typeof(Page3_Desktop));
+                DesktopAppSettings.AddItem("myFrameKey", MyFrame);
+            }
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)

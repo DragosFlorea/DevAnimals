@@ -105,23 +105,26 @@
     </Compile>
     <Compile Include="Desktop\Models\Category.cs" />
     <Compile Include="Desktop\Database_Control\DevAnimalsContext.cs" />
+    <Compile Include="Desktop\Models\LoginClass.cs" />
     <Compile Include="Desktop\Models\RegisterClass.cs" />
     <Compile Include="Desktop\RegisterAccount_Desktop.xaml.cs">
       <DependentUpon>RegisterAccount_Desktop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Desktop\Page2_Desktop.xaml.cs">
-      <DependentUpon>Page2_Desktop.xaml</DependentUpon>
+    <Compile Include="Desktop\LoginPage_Desktop.xaml.cs">
+      <DependentUpon>LoginPage_Desktop.xaml</DependentUpon>
     </Compile>
     <Compile Include="Desktop\Page3_Desktop.xaml.cs">
       <DependentUpon>Page3_Desktop.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Desktop\Settings\DesktopAppSettings.cs" />
+    <Compile Include="Desktop\ViewModels\Login_VM.cs" />
     <Compile Include="Desktop\ViewModels\RegisterAccount_VM.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20161009154133_FirstMigration.cs" />
-    <Compile Include="Migrations\20161009154133_FirstMigration.designer.cs">
-      <DependentUpon>20161009154133_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20161013152150_FirstMigration.cs" />
+    <Compile Include="Migrations\20161013152150_FirstMigration.designer.cs">
+      <DependentUpon>20161013152150_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DevAnimalsContextModelSnapshot.cs" />
     <Compile Include="Mobile\InterestsPage_mobile.xaml.cs">
@@ -184,7 +187,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Desktop\Page2_Desktop.xaml">
+    <Page Include="Desktop\LoginPage_Desktop.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -221,6 +224,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

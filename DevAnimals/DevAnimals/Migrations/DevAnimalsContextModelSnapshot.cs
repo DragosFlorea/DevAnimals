@@ -3,7 +3,6 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using DevAnimals.Desktop.Models;
 using DevAnimals.Desktop.Database_Control;
 
 namespace DevAnimals.Migrations
@@ -36,13 +35,15 @@ namespace DevAnimals.Migrations
                     b.Property<int>("IdUser")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Email");
+                    b.Property<string>("email");
 
-                    b.Property<string>("Location");
+                    b.Property<string>("location");
 
-                    b.Property<int>("TelephoneNumber");
+                    b.Property<string>("password");
 
-                    b.Property<string>("User");
+                    b.Property<int>("telephoneNumber");
+
+                    b.Property<string>("user");
 
                     b.HasKey("IdUser")
                         .HasAnnotation("Relational:Name", "PrimaryKey_IdUser");

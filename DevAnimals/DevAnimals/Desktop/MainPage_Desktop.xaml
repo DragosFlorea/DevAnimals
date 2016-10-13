@@ -25,8 +25,7 @@
                    HorizontalAlignment="Left"
                    Background="{ThemeResource SystemColorWindowColor}">
             <SplitView.Pane >
-                <ListBox SelectionMode="Single"
-                         Background="{StaticResource MyBrush}"
+                <ListBox SelectionMode="Single"                        
                          Name="IconListbox"
                          SelectionChanged="IconListbox_SelectionChanged">
                     <ListBoxItem Name="ShareListBoxitem">

@@ -22,11 +22,11 @@
             <TextBox x:Name="Register_textBox" TextWrapping="Wrap" Text="Please complete the following formular"/>
         </StackPanel>
         <StackPanel Grid.Row="2">
-            <TextBox x:Name="User_textBox" TextWrapping="Wrap" Text="{Binding User, Mode=TwoWay}"/>
-            <TextBox x:Name="Password_textBox" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}"/>
-            <TextBox x:Name="Email_textBox" TextWrapping="Wrap" Text="{Binding Email, Mode=TwoWay}"/>
-            <TextBox x:Name="Location_textBox" TextWrapping="Wrap" Text="{Binding Location, Mode=TwoWay}"/>
-            <TextBox x:Name="TelephoneNumber_textBox" TextWrapping="Wrap" Text="{Binding TelephoneNumber, Mode=TwoWay}"/>
+            <TextBox x:Name="User_textBox" TextWrapping="Wrap" Text="{Binding User, Mode=TwoWay}" PlaceholderText="user"/>
+            <TextBox x:Name="Password_textBox" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}" PlaceholderText="password"/>
+            <TextBox x:Name="Email_textBox" TextWrapping="Wrap" Text="{Binding Email, Mode=TwoWay}" PlaceholderText="email"/>
+            <TextBox x:Name="Location_textBox" TextWrapping="Wrap" Text="{Binding Location, Mode=TwoWay}" PlaceholderText="location"/>
+            <TextBox x:Name="TelephoneNumber_textBox" TextWrapping="Wrap" Text="{Binding TelephoneNumber, Mode=TwoWay}" PlaceholderText="telephone"/>
             <TextBox x:Name="textBox" TextWrapping="Wrap" Text="TextBox"/>
         </StackPanel>
         <StackPanel Grid.Row="4" >
