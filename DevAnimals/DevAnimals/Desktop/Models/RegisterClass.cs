@@ -17,7 +17,7 @@ namespace DevAnimals.Desktop.Models
         public string password { get; set; }
         public string location { get; set; }
         public string email { get; set; }
-        public int telephoneNumber { get; set; }
+        public string telephoneNumber { get; set; }
 
 
     }

@@ -1,4 +1,6 @@
-﻿using DevAnimals.Desktop.Settings;
+﻿using DevAnimals.Desktop;
+using DevAnimals.Desktop.Settings;
+using DevAnimals.Desktop.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,9 +25,12 @@ namespace DevAnimals.Device_Desktop
     /// </summary>
     public sealed partial class MainPage_Desktop : Page
     {
+        Login_VM x;
         public MainPage_Desktop()
         {
+            
             this.InitializeComponent();
+           x  = new Login_VM();
         }
         private void Hamburger_Click(object sender, RoutedEventArgs e)
         {
@@ -36,24 +41,40 @@ namespace DevAnimals.Device_Desktop
         {
             if (ShareListBoxitem.IsSelected)
             {
-                MyFrame.Navigate(typeof(RegisterAccount_Desktop));
-                DesktopAppSettings.AddItem("myFrameKeyforRegisterNavigationtoLoginPage", MyFrame);
+                
             }
-            else if (FavoritesListBoxItem.IsSelected)
+            else if (Login_AccountListBoxItem.IsSelected)
             {
+                               
+                if (!x.CheckifLogged((Login_VM)DesktopAppSettings.GetItem("LoggedUser")))
+                { 
+                DesktopAppSettings.AddItem("myFrameKeyforLoginNavigationtoLoginPage", MyFrame);
                 MyFrame.Navigate(typeof(LoginPage_Desktop));
-                DesktopAppSettings.AddItem("myFrameKeyforLoginNavigationtoAcountPage", MyFrame);
+                }
+                else
+                MyFrame.Navigate(typeof(AccountPage_Desktop));
             }
             else if (NavListBoxItem.IsSelected)
             {
-                MyFrame.Navigate(typeof(Page3_Desktop));
-                DesktopAppSettings.AddItem("myFrameKey", MyFrame);
+               
+               
             }
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
 
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!x.CheckifLogged((Login_VM)DesktopAppSettings.GetItem("LoggedUser")))
+            {
+                DesktopAppSettings.AddItem("myFrameKeyforLoginNavigationtoLoginPage", MyFrame);
+                MyFrame.Navigate(typeof(LoginPage_Desktop));
+            }
+            else
+                MyFrame.Navigate(typeof(NewAddPage_Desktop));
         }
     }
 }

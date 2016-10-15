@@ -6,32 +6,40 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="TextBox" x:Name="TextboxStyle">
+            <Setter Property="FontSize" Value="25"></Setter>
+            <Setter Property="Margin" Value="0,20,0,0"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80" ></RowDefinition>
-            <RowDefinition Height="80" ></RowDefinition>
             <RowDefinition Height="Auto" ></RowDefinition>
-            <RowDefinition Height="80" ></RowDefinition>
+            <RowDefinition Height="Auto" ></RowDefinition>
             <RowDefinition Height="Auto" ></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <TextBox x:Name="Title_textBox" TextWrapping="Wrap" Text="DevAnimals"/>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock x:Name="Title_textBlock" TextWrapping="Wrap" Text="DevAnimals" HorizontalAlignment="Center" FontSize="50"/>
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            <TextBox x:Name="Register_textBox" TextWrapping="Wrap" Text="Please complete the following formular"/>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock x:Name="Register_textBlock" TextWrapping="Wrap" Text="Please complete the following formular" HorizontalAlignment="Center" FontSize="40"/>
         </StackPanel>
-        <StackPanel Grid.Row="2">
-            <TextBox x:Name="User_textBox" TextWrapping="Wrap" Text="{Binding User, Mode=TwoWay}" PlaceholderText="user"/>
-            <TextBox x:Name="Password_textBox" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}" PlaceholderText="password"/>
-            <TextBox x:Name="Email_textBox" TextWrapping="Wrap" Text="{Binding Email, Mode=TwoWay}" PlaceholderText="email"/>
-            <TextBox x:Name="Location_textBox" TextWrapping="Wrap" Text="{Binding Location, Mode=TwoWay}" PlaceholderText="location"/>
-            <TextBox x:Name="TelephoneNumber_textBox" TextWrapping="Wrap" Text="{Binding TelephoneNumber, Mode=TwoWay}" PlaceholderText="telephone"/>
-            <TextBox x:Name="textBox" TextWrapping="Wrap" Text="TextBox"/>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <TextBox x:Name="User_textBox" TextWrapping="Wrap" Text="{Binding User, Mode=TwoWay}" PlaceholderText="User" Style="{StaticResource TextboxStyle}"/>
+            <TextBox x:Name="Password_textBox" TextWrapping="Wrap" Text="{Binding Password, Mode=TwoWay}" PlaceholderText="Password" Style="{StaticResource TextboxStyle}"/>
+            <TextBox x:Name="Email_textBox" TextWrapping="Wrap" Text="{Binding Email, Mode=TwoWay}" PlaceholderText="Email" Style="{StaticResource TextboxStyle}"/>
+            <TextBox x:Name="Location_textBox" TextWrapping="Wrap" Text="{Binding Location, Mode=TwoWay}" PlaceholderText="Location" Style="{StaticResource TextboxStyle}"/>
+            
+            <TextBox x:Name="TelephoneNumber_textBox" TextWrapping="Wrap" Text="{Binding TelephoneNumber, Mode=TwoWay}" PlaceholderText="Telephone" Style="{StaticResource TextboxStyle}"/>
+            <Button x:Name="Register_btn" Content="Register" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Register_btn_Click" Margin="0,40,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Row="4" >
-            <Button x:Name="Register_btn" Content="Register" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Register_btn_Click"/>
-        </StackPanel>
-        
+        <ComboBox x:Name="comboBox1" Grid.Column="1" HorizontalAlignment="Left" Margin="222,563,0,-161" Grid.Row="2" VerticalAlignment="Top" Width="120"/>
+
+
     </Grid>
 </Page>

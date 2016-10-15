@@ -3,6 +3,7 @@ using DevAnimals.Desktop.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,25 +69,13 @@ namespace DevAnimals.Desktop.ViewModels
                 }
             }
         }
-        //public string IDUser
-        //{
-        //    get
-        //    {
-        //        if (this.registereduser == null)
-        //        {
-        //            return string.Empty;
-        //        }
-        //        return new Guid().ToString();
-        //    }
-            
-        //}
-        public int TelephoneNumber
+        public string TelephoneNumber
         {
             get
             {
                 if (this.registereduser == null)
                 {
-                    return 0;
+                    return string.Empty;
                 }
                 return this.registereduser.telephoneNumber;
             }
@@ -137,5 +126,7 @@ namespace DevAnimals.Desktop.ViewModels
                 }
             }
         }
+
+        
     }
 }

@@ -14,7 +14,7 @@ namespace DevAnimals.Desktop.Database_Control
 {
    public class DevAnimalsContext : DbContext
     {
-        internal DbSet<Category> Categories { get; set; }
+        //internal DbSet<Category> Categories { get; set; }
         internal DbSet<RegisterClass> Accounts { get;set; }
         protected override void OnConfiguring
             (DbContextOptionsBuilder optionsBuilder)
@@ -24,9 +24,9 @@ namespace DevAnimals.Desktop.Database_Control
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Make IdCategory required
-            modelBuilder.Entity<Category>()
-                .HasKey(p => p.IdCategory)
-                .HasName("PrimaryKey_IdCategory");
+            //modelBuilder.Entity<Category>()
+            //    .HasKey(p => p.IdCategory)
+            //    .HasName("PrimaryKey_IdCategory");
             modelBuilder.Entity<RegisterClass>()
                 .HasKey(p => p.IdUser)
                 .HasName("PrimaryKey_IdUser");

@@ -1,4 +1,5 @@
-﻿using DevAnimals.Desktop.Database_Control;
+﻿using DevAnimals.Desktop;
+using DevAnimals.Desktop.Database_Control;
 using DevAnimals.Desktop.Models;
 using DevAnimals.Desktop.Settings;
 using DevAnimals.Desktop.ViewModels;
@@ -28,10 +29,12 @@ namespace DevAnimals.Device_Desktop
     public sealed partial class LoginPage_Desktop : Page
     {
         private Login_VM LoginUser;
+        Frame MyFrame;
         public LoginPage_Desktop()
         {
             this.InitializeComponent();
             LoginUser = new Login_VM(new LoginClass());
+            MyFrame = (Frame)DesktopAppSettings.GetItem("myFrameKeyforLoginNavigationtoLoginPage");
             DataContext = LoginUser;
         }
 
@@ -40,14 +43,26 @@ namespace DevAnimals.Device_Desktop
             Login_VM x = new Login_VM();
             
             var response=x.CheckAuth(LoginUser);
-            Frame MyFrame = (Frame)DesktopAppSettings.GetItem("myFrameKeyforLoginNavigationtoAcountPage");           
+
             if (response)
             {
                 var dialog = new MessageDialog("Login Complete!");
                 await dialog.ShowAsync();
-                MyFrame.Navigate(typeof(Page3_Desktop));
-                //var yx =DesktopAppSettings.GetItem("myFrameKey");
+                DesktopAppSettings.AddItem("LoggedUser", LoginUser);
+                MyFrame.Navigate(typeof(AccountPage_Desktop));
+                
             }
+            else
+            {
+                var dialog = new MessageDialog("User or password incorrect!! Please try again.");
+                await dialog.ShowAsync();
+            }
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(RegisterAccount_Desktop));
+            DesktopAppSettings.AddItem("myFrameKeyforRegisterNavigationtoLoginPage", MyFrame);
         }
     }
 }

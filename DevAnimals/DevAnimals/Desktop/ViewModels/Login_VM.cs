@@ -10,6 +10,7 @@ namespace DevAnimals.Desktop.ViewModels
 {
     internal class Login_VM
     {
+        
         private LoginClass registereduser;
         public Login_VM()
         { }
@@ -17,7 +18,6 @@ namespace DevAnimals.Desktop.ViewModels
         {
             this.registereduser = _registereduser;
         }
-
         public string User
         {
             get
@@ -33,6 +33,25 @@ namespace DevAnimals.Desktop.ViewModels
                 if (this.registereduser != null)
                 {
                     this.registereduser.user = value;
+
+                }
+            }
+        }
+        public bool AuthStatus
+        {
+            get
+            {
+                if (this.registereduser == null)
+                {
+                    return false;
+                }
+                return this.registereduser.authStatus;
+            }
+            set
+            {
+                if (this.registereduser != null)
+                {
+                    this.registereduser.authStatus = value;
 
                 }
             }
@@ -59,15 +78,25 @@ namespace DevAnimals.Desktop.ViewModels
 
         public bool CheckAuth(Login_VM authItem)
         {
+
             var x = UsersRepository.GetAllUsers();
             if (x != null)
             {
                 var CheckUser = x.Any(p => p.user == authItem.User);
                 var CheckPassword = x.Any(p => p.password == authItem.Password);
-                if (CheckUser && CheckPassword) return true;
+                if (CheckUser && CheckPassword)
+                { authItem.AuthStatus = true; return true; }
             }
             else return false;
             return false;
         }
+        public bool CheckifLogged(Login_VM authItem)
+        {
+            if (authItem != null)
+                return authItem.AuthStatus;
+            else
+                return false;
+        }
+        
     }
 }

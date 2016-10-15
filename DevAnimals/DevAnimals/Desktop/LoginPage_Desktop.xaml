@@ -7,19 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel Width="374" Height="600">
-            <StackPanel Orientation="Vertical" Width="374" Height="200" >
-                <Image Source="/Assets/dog2.jpg" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="150" Height="150" Margin="-10,0,0,0" />
-                <TextBlock Margin="0,10,0,0" TextAlignment="Center" FontSize="25">Sign in</TextBlock>
-            </StackPanel>
-            <StackPanel Width="365" Height="400">
-                <TextBox  x:Name="UsertextBox" HorizontalAlignment="Left" Margin="90,30,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="184" PlaceholderText="User" Text="{Binding User,Mode=TwoWay}"/>
-                <PasswordBox x:Name="UserpasswordBox" HorizontalAlignment="Left" Margin="90,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="184" PlaceholderText="Password" Password="{Binding Password,Mode=TwoWay}"/>
-                <Button x:Name="LoginButton" Width="200" Height="50" Margin="80,20,0,0" Content="Login" Click="LoginButton_Click"></Button>
-                <TextBlock HorizontalAlignment="Left" Margin="90,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="184" TextAlignment="Center" TextWrapping="Wrap">Forgot your credential? Click here</TextBlock>
-                
-            </StackPanel>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Width="682" Height="338" HorizontalAlignment="Center" Margin="696,0,542,0">
+            <Image Source="/Assets/dog2.jpg" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="150" Height="150" Margin="-10,0,0,0" />
+            <TextBlock Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="35" Height="52">Sign in</TextBlock>
         </StackPanel>
-    </Grid>
+        <StackPanel Width="682" Height="400" HorizontalAlignment="Center" Margin="696,0,542,0">
+            <TextBox  x:Name="UsertextBox"  Margin="58,30,33,0"  TextWrapping="Wrap" HorizontalAlignment="Center" Width="591" PlaceholderText="User" Text="{Binding User,Mode=TwoWay}"/>
+            <PasswordBox x:Name="UserpasswordBox" HorizontalAlignment="Center" Margin="58,20,33,0" Grid.Row="1" Width="591" PlaceholderText="Password" Password="{Binding Password,Mode=TwoWay}"/>
+            <Grid Margin="0,40,0,0" HorizontalAlignment="Center">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="50"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="250" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="LoginButton" Width="200" HorizontalAlignment="Center" Grid.Column="0"  Content="Login" Click="LoginButton_Click"/>
+                <Button x:Name="RegisterButton" Width="200" HorizontalAlignment="Center" Grid.Column="1"  Content="Register" Click="RegisterButton_Click"/>
+
+            </Grid>
+            <TextBlock HorizontalAlignment="Center" Margin="221,20,232,0" VerticalAlignment="Top" Width="229" TextAlignment="Center" TextWrapping="Wrap">Forgot your credential?</TextBlock>
+        </StackPanel>
+    </StackPanel>
 </Page>

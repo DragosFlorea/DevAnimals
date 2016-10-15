@@ -98,6 +98,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Desktop\AccountPage_Desktop.xaml.cs">
+      <DependentUpon>AccountPage_Desktop.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Desktop\ComponentModel\ObservableObjectBase.cs" />
     <Compile Include="Desktop\Database_Control\Repository.cs" />
     <Compile Include="Desktop\MainPage_Desktop.xaml.cs">
@@ -113,8 +116,8 @@
     <Compile Include="Desktop\LoginPage_Desktop.xaml.cs">
       <DependentUpon>LoginPage_Desktop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Desktop\Page3_Desktop.xaml.cs">
-      <DependentUpon>Page3_Desktop.xaml</DependentUpon>
+    <Compile Include="Desktop\NewAddPage_Desktop.xaml.cs">
+      <DependentUpon>NewAddPage_Desktop.xaml</DependentUpon>
     </Compile>
     <Compile Include="Desktop\Settings\DesktopAppSettings.cs" />
     <Compile Include="Desktop\ViewModels\Login_VM.cs" />
@@ -122,9 +125,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20161013152150_FirstMigration.cs" />
-    <Compile Include="Migrations\20161013152150_FirstMigration.designer.cs">
-      <DependentUpon>20161013152150_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\20161015174956_FirstMigration.cs" />
+    <Compile Include="Migrations\20161015174956_FirstMigration.designer.cs">
+      <DependentUpon>20161015174956_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DevAnimalsContextModelSnapshot.cs" />
     <Compile Include="Mobile\InterestsPage_mobile.xaml.cs">
@@ -179,6 +182,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Desktop\AccountPage_Desktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Desktop\MainPage_Desktop.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -191,7 +198,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Desktop\Page3_Desktop.xaml">
+    <Page Include="Desktop\NewAddPage_Desktop.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

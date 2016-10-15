@@ -13,12 +13,17 @@ namespace DevAnimals.Desktop.Settings
 
         public static void AddItem(string itemKey, object itemValue)
         {
+            if( !_settingsCache.Any(p=>p.Key==itemKey))
             _settingsCache.Add(itemKey, itemValue);
         }
 
         public static object GetItem(string itemKey)
         {
-            return _settingsCache[itemKey];
+            
+            if (_settingsCache.Any(p => p.Key == itemKey))
+                return _settingsCache[itemKey];
+            else
+                return null;
         }
     }
 }

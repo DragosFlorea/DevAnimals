@@ -10,5 +10,6 @@ namespace DevAnimals.Desktop.Models
     {
         public string user { get; set; }
         public string password { get; set; }
+        public bool authStatus { get; set; }
     }
 }

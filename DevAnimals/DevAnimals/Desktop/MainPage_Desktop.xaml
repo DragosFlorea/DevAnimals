@@ -6,7 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.BottomAppBar>
+        <CommandBar Height="50" x:Name="CommandBar">
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:Name="NewAddButton" Icon="Add" Label="appbarbutton" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,22 +35,23 @@
                 <ListBox SelectionMode="Single"                        
                          Name="IconListbox"
                          SelectionChanged="IconListbox_SelectionChanged">
-                    <ListBoxItem Name="ShareListBoxitem">
+                    <ListBoxItem Name="ShareListBoxitem" Width="350">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;"/>
                             <TextBlock Text="Share" FontSize="24" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name="FavoritesListBoxItem">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE734;"/>
-                            <TextBlock Text="Favorites" FontSize="24" Margin="20,0,0,0"/>
-                        </StackPanel>
-                    </ListBoxItem>
+                   
                     <ListBoxItem Name="NavListBoxItem">
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" Width="350">
                             <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE72D;"/>
                             <TextBlock Text="ThirdItem" FontSize="24" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Login_AccountListBoxItem">
+                        <StackPanel Orientation="Horizontal" Width="350">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="36" Text="&#xE77B;"/>
+                            <TextBlock Text="Account" FontSize="24" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>

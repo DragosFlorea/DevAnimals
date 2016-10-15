@@ -9,8 +9,14 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>6d988544-5043-4ab8-9de3-14fb75067c55</PackageIdentityName>
+    <PackageIdentityPublisher>CN=drago</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\GitHub\DevAnimals\DevAnimals\DevAnimals\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>AC1E68A452307F639B29376B3AE6EE2882139DE27BA70BEBF8F93291E4BB875D</RegisteredManifestChecksum>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <RegisteredManifestChecksum>82D5AFD930E06DA732EF4762BBDE2F9D6625ADDE06C934D99F21DE995344D34C</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>6d988544-5043-4ab8-9de3-14fb75067c55_1.0.0.0_x86__084w3v5996pr0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>6d988544-5043-4ab8-9de3-14fb75067c55_084w3v5996pr0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>6d988544-5043-4ab8-9de3-14fb75067c55</RegisteredPackageID>
@@ -22,13 +28,13 @@
     <AppXManifest Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-10-13T17:01:43.845</Modified>
+      <Modified>2016-10-15T18:12:59.951</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\DevAnimals.exe">
       <PackagePath>entrypoint\DevAnimals.exe</PackagePath>
-      <Modified>2016-10-13T17:01:43.433</Modified>
+      <Modified>2016-10-15T18:12:59.361</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\drago\.nuget\packages\EntityFramework.Core\7.0.0-rc1-final\lib\netcore50\EntityFramework.Core.dll">
       <PackagePath>EntityFramework.Core.dll</PackagePath>
@@ -642,19 +648,20 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\DevAnimals.xr.xml">
       <PackagePath>DevAnimals.xr.xml</PackagePath>
-      <Modified>2016-10-13T15:44:34.037</Modified>
+      <Modified>2016-10-15T18:12:59.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2016-05-31T20:22:08.854</Modified>
+      <Modified>2016-10-13T18:09:45.755</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-10-13T16:29:42.101</Modified>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-10-15T18:12:59.803</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GitHub\DevAnimals\DevAnimals\DevAnimals\bin\x86\Debug\Core\DevAnimals.exe">
       <PackagePath>DevAnimals.exe</PackagePath>
-      <Modified>2016-10-13T17:01:43.836</Modified>
+      <Modified>2016-10-15T18:12:59.943</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
@@ -687,27 +694,27 @@
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.23918.0</Version>
+      <Version>14.0.24210.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.23918.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.24210.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.23918.0</Version>
+      <Version>14.0.24210.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.23918.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.24210.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.23918.0</Version>
+      <Version>14.0.24210.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.23918.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.24210.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
